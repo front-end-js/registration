@@ -2,14 +2,7 @@
 
 window.addEventListener('load', () => {
 
-    let form = document.getElementById('form1');
-    form.addEventListener('submit', () => {
-        let access = confirm('Вы уверены в надежности данных, введенных в форму?');
-        if (access === true) {
-            form.submit();
-        } else {
-            alert('Данные не надежны! Отправка заблокирована!');
-        }
-    });
+    const controller = new Controller('login', 'pass1', 'pass2', 'email', 'form1');
+    controller.activateListeners();
 
 });
